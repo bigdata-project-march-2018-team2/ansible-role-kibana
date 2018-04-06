@@ -1,4 +1,9 @@
 ---
+
+- set_fact:
+    kibana_addr: "{{ kibana_server_host }}"
+    kibana_port: "{{ kibana_server_port }}"
+
 - include: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
